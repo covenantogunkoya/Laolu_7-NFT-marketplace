@@ -32,6 +32,7 @@ nav ul a{
     color: #fff;
     text-decoration: none;
 }
+
 .dashed{
     border-bottom: 2px solid rgb(135, 183, 240);
 }
@@ -101,7 +102,7 @@ img{
     justify-content: space-between;
  }
  .upper-text{
-    font-size: 50px;
+    font-size: 46px;
  }
  .btns{
     padding: 15px;
@@ -114,43 +115,7 @@ img{
     width: 10%;
     cursor: pointer;
  }
-
- .main-header{
-    display: flex;
-    gap: 1rem;
-    overflow: hidden;
-    align-items: center;
- }
- .main-header img{
-    height: 350px;
-    width: 400px;
- }
  
- .left-image{
-    background-color: #020308;
-    margin: 0;
-    padding: 15px;
-    border-radius: 30px;
-    box-shadow: #020308;
- }
- .text-lowercase{
-    display: flex;
-    color: white;
-    justify-content: space-between;
-}
-.card-word{
-    color: white;
-}
-.timing{
-    display: flex;
-    justify-content: space-between;
-    color: white;
-}
-.time{
-    font-size: 1.2em;
-    font-weight: bold;
-    margin: 10px 0;
-}
 .bid-button{
     width: 40%;
     background-color: #010613;
@@ -160,20 +125,7 @@ img{
     border-radius: 10px;
     cursor: pointer;
 }
-.middle-image{
-    background-color: #020308;
-    margin: 0;
-    padding: 15px;
-    border-radius: 30px;
-    box-shadow: #020308;
-}
-.right-image{
-    background-color: #020308;
-    margin: 0;
-    padding: 15px;
-    border-radius: 30px;
-    box-shadow: #020308;
-}
+
 .double-container{
     display: flex;
     justify-content: space-between;
@@ -269,7 +221,7 @@ img{
     outline: none;
 }
 .subscribe-container button{
-    padding: 20px;
+    padding: 10px;
     height: 60px;
     border-radius: 10px;
     background-color: #204eb2;
@@ -277,7 +229,8 @@ img{
     font-size: 20px;
     color: #fff;
     cursor: pointer;
-    margin-left: 147px;
+    margin-left: 133px;
+    margin-bottom: 10px;
 }
 ::placeholder{
     color: #fff;
@@ -286,7 +239,7 @@ img{
     display: flex;
     background-color: #6f8fd9;
     height: 60px;
-    width: 80%;
+    width: 100%;
     border-radius: 10px;
 }
 .section{
@@ -307,12 +260,7 @@ img{
     width: 400px;
     height: 400px;
 }
-.upper-image{
-    position: absolute;
-    right: 100px;
-    bottom: 100px;
-    z-index: -999;
-}
+
 .fourth-img{
     margin-top: 70px;
 }
@@ -392,105 +340,302 @@ footer{
     background-color: #fff;
     border-radius: 5px;
 }
-@media (min-width: 728px) and (max-width: 903.98px){
-   .image-side{
-       display: none;
-   }
-   .btn{
+.cta-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    color: #fff;
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+.cta-content {
+    max-width: 50%;
+}
+
+.cta-title {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+.cta-image{
+    display: flex;
+    width: 40%;
+    margin-left: 50px;
+}
+.upper-image{
+    position: absolute;
+    right: 50px;
+    z-index: -999;
+}
+.lower-image{
+    position: relative;
+    top: 100px;
+}
+
+.highlights {
+    color: #00bfff;
+}
+.cta-subtitle {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.btn {
+    padding: 10px 20px;
+    font-size: 16px;
     border: none;
-    line-height: 28px;
- }
- .navbar .btns{
-width: 100px;
- }
- .header .content h1{
-    font-size: 70px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
-.btn{
-    padding: 5px;
-    width: 30%;
-    height: 60px;
+.btn-primary {
+    background-color: #00bfff;
+    color: #fff;
 }
-.main-header{
+
+.btn-primary:hover {
+    background-color: #008fc1;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: #00bfff;
+    border: 2px solid #00bfff;
+}
+.btn-secondary:hover {
+    background-color: #00bfff;
+    color: #fff;
+}
+
+.cta-image {
+    max-width: 45%;
+}
+
+.cta-image img {
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+}
+
+.artworks-section {
+    padding: 20px;
+    text-align: center;
+}
+
+.artworks-section h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.artworks-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.artwork-card {
+    color: #fff;
+    overflow: hidden;
+    width: 300px;
+    text-align: left;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    background-color: #020308;
+    margin: 0;
+    padding: 15px;
+    border-radius: 30px;
+    box-shadow: #020308;
+}
+
+.artwork-card:hover {
+    transform: translateY(-10px);
+}
+
+.artwork-card img {
+    width: 100%;
+    height: auto;
+}
+
+.artwork-card h3 {
+    margin: 15px;
+    font-size: 20px;
+}
+
+.artwork-card p {
+    margin: 0 15px 15px;
+    font-size: 16px;
+}
+
+.artwork-card button {
+    display: block;
+    width: calc(100% - 30px);
+    margin: 15px;
+    padding: 10px 0;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+.artwork-card button:hover {
+    background-color: #0056b3;
+    transition: background-color 0.3s ease;
+}
+
+
+.card-header{
+    display: flex;
+    justify-content: space-between;
+}
+.card-btn{
+    padding: 15px;
+    background-color: rgb(135, 183, 240);
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 15px;
+    height: 50px;
+    width: 10%;
+    cursor: pointer;
     
 }
-}
-@media (max-width: 728px){
-    .image-side{
-        display: none;
-    }
-    .header .content h1{
-        font-size: 60px;
-    }
-    .stats .stat{
-        font-size: 20px;
-     }
+.card-btn:hover{
+    background-color: #0056b3;
+    transition: background-color 0.3s ease;
     
-    .navbar .btns{
-        width: 100px;
-         }
-         .third-image{
-            display: none;
-        }  
-         
 }
-@media (max-width: 622px){
-    .navbar li{
+.art-flex{
+    display: flex;
+    align-items: baseline;
+}
+
+.art-work-title{
+    display: fle;
+    color: white;
+    justify-content: space-between;
+}
+.card-time{
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 10px 0;
+}
+.time{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+.end{
+    margin-bottom: 5px;
+}
+
+@media (max-width: 1024px) {
+    
+    .artworks-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .artwork-card {
+        width: 80%;
+    }
+    .cta-section {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 20px;
+    }
+
+    .cta-content .cta-images {
+        max-width: 100%;
+    }
+
+    .cta-title {
+        font-size: 28px;
+    }
+    .cta-subtitle {
         font-size: 16px;
     }
-    .navbar .btns{
-        width: 100px;
-         }
-       .stats .stat{
-            font-size: 20px;
-         }
-         .header .content h1{
-            font-size: 50px;
-        }
-         hr{
-            height: 60px;
-         }
-         .third-image{
-            display: none;
-        }
-        .main-header{
-            flex-direction: column;
-         }
-         
-}
-@media (max-width: 552px){
-  .hide{
-    display: none;
-  }  
-  .header .content h1{
-    font-size: 50px;
-}
-  
-  .header .content p{
-    font-size: 18px;
-}
-.btn{
-    padding: 15px;
-    width: 30%;
- }
- .third-image{
+
+    .cta-buttons {
+        justify-content: center;
+    }
+
+    .cta-image{
     display: none;
 }
+
 }
-@media (max-width: 455px){
-    .stats .stat{
-        font-size: 15px;
-    }   
-    hr{
-        height: 50px;
+
+@media (max-width: 768px) {
+     nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px 20px;
+  }
+
+  nav ul {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+
+    .artworks-section h2 {
+        font-size: 20px;
     }
-    .now-none{
-        display: none;
+
+ .artwork-card h3 {
+        font-size: 18px;
     }
-    .third-image{
-        display: none;
+
+    .artwork-card p {
+        font-size: 14px;
     }
-    .sell-section{
-        justify-content: cente;
+
+    .artwork-card button {
+        font-size: 14px;
+    }
+    .cta-image {
+        position: absolute;
+        width: 80%;
+    }
+    
+}
+@media (max-width: 480px) {
+    .artwork-card {
+        width: 100%;
+    }
+
+    .artworks-section h2 {
+        font-size: 18px;
+    }
+
+    .artwork-card h3 {
+        font-size: 16px;
+    }
+
+    .artwork-card p {
+        font-size: 12px;
+    }
+    .artwork-card button {
+        font-size:12px;
     }
 }
+
+
+
+
+
+
+
+
