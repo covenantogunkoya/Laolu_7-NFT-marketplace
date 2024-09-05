@@ -15,31 +15,100 @@ body{
     height: 100%;
     padding: 10px;
 }
-nav{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-nav ul{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 2rem;
-    list-style: none;
-    font-size: 19px;
-}
-nav ul a{
-    color: #fff;
-    text-decoration: none;
-}
 
-.dashed{
-    border-bottom: 2px solid rgb(135, 183, 240);
-}
 .navbar{
+    width: 100%;
+    height: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     margin-bottom: 60px;
 }
-.header{
+.navbar .logo a{
+    font-size: 40px;
+    font-weight: bold;
+    background-color: #010613;
+    align-items: center;
+    justify-content: center;
+    text-decoration: underline rgb(135, 183, 240);;
+    
+}
+  
+.navbar .toggle-btn{
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    display: none;
+}
+.action-btn{
+    font-weight: bold;
+    padding: 15px;
+    background-color: rgb(135, 183, 240);
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 15px;
+    height: 50px;
+    cursor: pointer;
+    transition: scale 0.2 ease;
+}
+.action-btn:active{
+    scale: 0.9;
+}
+.action-btn:hover{
+    scale: 1.05;
+    color: #fff;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+}
+a:hover{
+    color: rgb(135, 183, 240);;
+}
+header{
+    position: relative;
+    padding: 0 2rem;
+}
+.navbar .links{
+    display: flex;
+    gap: 2rem;
+}
+.dropdown-menu{
+    display: none;
+    position: absolute;
+    color: #fff;
+    right: 2rem;
+    top: 60px;
+    height: 0;
+    width: 300px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height 0.2s cubic-bezier(0.175 0.885, 0.32, 1.275);
+}
+.dropdown-menu.open{
+    height: 240px;
+}
+.dropdown-menu li{
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.dropdown-menu .action-btn{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.Discover-section{
     display: flex;
     justify-content: space-between;
     margin-bottom: 70px;
@@ -105,19 +174,11 @@ img{
     font-size: 46px;
     line-height: 1.5;
  }
- .btns{
-    padding: 15px;
-    background-color: rgb(135, 183, 240);
-    border: none;
-    border-radius: 10px;
-    color: #fff;
-    font-size: 15px;
-    height: 50px;
-    cursor: pointer;
- }
+
  .btns:hover{
     background-color: #0056b3;
     transition: background-color 0.3s ease;
+    scale: 1.05;
  }
  
 .bid-button{
@@ -214,17 +275,8 @@ img{
     margin-bottom: 20px;
     color: #fff;
 }
-.email-input{
-    width: 50%;
-    padding: 20px;
-    margin-bottom: 10px;
-    border-radius: 5px;
-    border: none;
-    background-color: transparent;
-    font-size: 20px;
-    color: #fff;
-    outline: none;
-}
+
+
 .subscribe-container button{
     padding: 10px;
     height: 60px;
@@ -235,17 +287,32 @@ img{
     color: #fff;
     cursor: pointer;
 }
+
 ::placeholder{
     color: #fff;
 }
-.input-container{
+.input-container form{
+    position: relative;
     display: flex;
     background-color: #6f8fd9;
     height: 60px;
     width: 100%;
     border-radius: 10px;
-    justify-content: center;
+    justify-content: end;
     align-items: center;
+
+}
+
+.email-input{
+    width: 100%;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: transparent;
+    font-size: 25px;
+    color: #fff;
+    outline: none;
+    padding: 1rem 2rem;
 }
 .section{
     display: flex;
@@ -337,7 +404,7 @@ footer{
     display: flex;
     gap: 1rem;
 }
-.logo{
+.facebook-logo{
     background-color: rgb(66, 66, 187);
     border-radius: 5px;
 }
@@ -410,7 +477,6 @@ footer{
 .btn-secondary {
     background-color: transparent;
     color: #00bfff;
-    border: 2px solid #00bfff;
 }
 .btn-secondary:hover {
     background-color: #00bfff;
@@ -546,6 +612,7 @@ footer{
     margin-top: 100px; 
     width: 300px; 
      height: 350px;
+     margin-left:170px;
 }
 
 
@@ -557,7 +624,7 @@ footer{
 
 @media(max-width: 1000px) {
 
-    .header {
+    .Discover-section {
         flex-direction: column;
         gap: 2rem;
         justify-content: center;
@@ -624,7 +691,9 @@ footer{
         grid-row-start: 1;
         grid-row-end: 4;
 }
-   
+.navbar .logo a{
+    font-size: 60px;
+} 
 }
 
 
@@ -659,7 +728,9 @@ footer{
     .cta-image{
     display: none;
 }
-
+.navbar .logo a{
+    font-size: 50px;
+}
 }
 
 @media (max-width: 1024px) {
@@ -673,7 +744,7 @@ footer{
 
 
 @media (max-width: 768px) {
-    .header h1{
+    .Discover-section h1{
         font-size: 80px;
     }
     .stats{
@@ -712,6 +783,9 @@ footer{
         position: absolute;
         width: 80%;
     }
+    .navbar .logo a {
+        font-size: 40px;
+    }
     
 }
 @media (max-width:700px){
@@ -743,7 +817,7 @@ footer{
 }
 }
 @media (max-width:600px){
-    .header h1{
+    .Discover-section h1{
         font-size: 70px;
     }
     .stats {
@@ -786,7 +860,20 @@ footer{
         grid-row-start: 4;
         grid-row-end: 8;
     }
-   
+    .navbar .logo a {
+        font-size: 30px;
+    }
+
+}
+@media (max-width: 987px){
+    .navbar .logo a {
+        font-size: 50px;
+    }
+}
+@media (max-width: 329px){
+    .navbar .logo a {
+        font-size: 20px;
+    }
 }
 @media (max-width: 500px){
     .gallery__item--1 {
@@ -820,6 +907,19 @@ footer{
         grid-row-start: 19;
         grid-row-end: 21;
     }
+    .image-container img{
+            width: 250px;
+            height: 250px;
+        }
+        .image-container .nft-card{
+            width: 250px;
+            height: 250px;
+            margin-right: 5px;
+        }
+        .double-container{
+            margin-top: 100px;
+        }
+    }
     @media (max-width: 550px){
         .text-header{
             flex-direction: column;
@@ -829,8 +929,17 @@ footer{
         .btns{
             line-height: 1;
         }
+        .image-container img{
+            width: 250px;
+            height: 250px;
+        }
+        .image-container .nft-card{
+            width: 250px;
+            height: 250px;
+            margin-right: 5px;
+        }
     }
-}
+
 @media (max-width: 480px) {
     .artwork-card {
         width: 100%;
@@ -869,6 +978,25 @@ footer{
     hr{
         height: 40px;
     }
+    .image-container img{
+        width: 200px;
+        height: 190px;
+        margin-left: 15px;
+    }
+    .image-container .nft-card{
+        width: 190px;
+        height: 190px;
+        margin-top: 50px;
+        margin-left: 110px;
+        
+    }
+    
+}
+@media(max-width:460px){
+    .navbar .logo a{
+        font-size: 40px;
+    }
+    
 }
 @media(max-width:440px){
     .image-side img{
@@ -902,7 +1030,68 @@ height: 400px;
     .subscribe-container p{
         font-size: 15px;
     }
+    .subscribe-container button {
+        font-size: 10px;
+    }
 }
+@media(max-width:340px){
+    .content h1{
+        font-size: 35px;
+    }
+    .highlight {
+        font-size: 12px;
+    }
+    .stats {
+        font-size: 10px;
+    }
+    .btn {
+        width: 100px;
+        font-size: 12px;
+    }
+    .learn-btn{
+        font-size: 12px;
+        background-color: transparent;
+    }
+}
+@media(max-width:312px){
+    .content h1{
+        font-size: 25px;
+    }
+    .stats {
+        font-size: 8px;
+       }
+     .image-side img {
+            width: 250px;
+            height: 350px;
+        }
+     .image-container .nft-card {
+            width: 180px;
+            height: 170px;
+            margin-top: 50px;
+            margin-left: 90px;
+        }
+}
+@media(max-width:992px){
+    .navbar .links,
+    .navbar .action-btn{
+        display: none;
+    }
+    .navbar .toggle-btn{
+        display: block;
+    }
+    .dropdown-menu{
+        display: block;
+    }
+
+}
+@media(max-width:576px){
+    .dropdown-menu{
+        left: 2rem;
+        width: unset;
+    }
+}
+
+
 
 
 
