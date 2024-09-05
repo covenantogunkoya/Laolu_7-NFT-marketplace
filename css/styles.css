@@ -1030,9 +1030,6 @@ height: 400px;
     .subscribe-container p{
         font-size: 15px;
     }
-    .subscribe-container button {
-        font-size: 10px;
-    }
 }
 @media(max-width:340px){
     .content h1{
