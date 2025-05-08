@@ -5,7 +5,7 @@
 }
 body{
   background-color: #010613;
-  font-family: 'Roboto';
+  font-family: sans-serif;
     position: relative;
 }
 
@@ -25,6 +25,7 @@ body{
     align-items: center;
     justify-content: space-between;
     margin-bottom: 60px;
+    z-index: 1000;
 }
 .navbar .logo a{
     font-size: 40px;
@@ -159,7 +160,7 @@ span{
     color: rgb(135, 183, 240);
 }
 hr{
-    height: 90px;
+    height: 91px;
 }
 img{
    height: 520px;
